@@ -1,37 +1,26 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+# 1. 依赖目录（必须忽略，体积大且可重新生成）
+node_modules/
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+# 2. 环境变量文件（避免敏感信息泄露，如数据库密码）
+.env
 
-# Logs and databases #
-######################
+# 3. 构建输出目录（如 Vite/Webpack 的构建结果，可重新生成）
+dist/
+build/
+
+# 4. 日志文件
 *.log
-*.sql
-*.sqlite
+npm-debug.log*
 
-# OS generated files #
-######################
+# 5. 操作系统隐藏文件（如 macOS 的 .DS_Store）
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+
+# 6. IDE 配置文件（如 VS Code、WebStorm 的设置）
+.vscode/
+.idea/
+
+# 7. 可选：忽略 package-lock.json（通常建议保留，锁定依赖版本）
+# package-lock.json
+
+# 8. 其他临时文件
+.tmp/
